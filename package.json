@@ -7,9 +7,16 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "build:metro": "rollup -c"
   },
   "dependencies": {
-    "astro": "^4.15.7"
+    "@astrojs/mdx": "^3.1.6",
+    "@olton/metroui": "^5.0.10",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "astro": "^4.15.7",
+    "less": "^4.2.0",
+    "rollup": "^4.21.3",
+    "rollup-plugin-postcss": "^4.0.2"
   }
 }

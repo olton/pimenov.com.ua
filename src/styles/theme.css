@@ -1,0 +1,9 @@
+:root {
+    --border-color: #ffbd99;
+    --accent-block-background: rgba(255, 189, 153, 0.1);
+    --accent-block-color: #000000;
+
+    --appbar-item-background-hover: darkorange;
+    --appbar-item-color-hover: white;
+}
+

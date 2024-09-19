@@ -1,0 +1,22 @@
+---
+import Head from "../components/Head.astro"
+import Footer from "../components/Footer.astro"
+import Appbar from "../components/Appbar.astro"
+
+const { title = '' } = Astro.props
+---
+<!DOCTYPE html>
+<html lang="ua">
+<head>
+    <Head title={title}/>
+    <title>{title}</title>
+</head>
+<body class="cloak">
+    <Appbar/>
+
+    <slot/>
+
+    <Footer/>
+    <script is:inline src="/metroui/metro-5.0.10.js"></script>
+</body>
+</html>

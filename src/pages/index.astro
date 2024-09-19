@@ -1,16 +1,339 @@
 ---
-
+import {Image} from "astro:assets"
+import DefaultPage from "../layouts/DefaultPage.astro"
+import MyPhoto from "../assets/me.png"
+import MyPhoto2 from "../assets/me2.jpg"
+import workMetroui from "../assets/works/metroui.jpg"
+import workMinataur from "../assets/works/minataur.jpg"
+import workKorzh from "../assets/works/korzh.jpg"
+import workCrypto from "../assets/works/cryptoscamalert.jpg"
+import workPandora from "../assets/works/pandora.jpg"
+import workReserve from "../assets/works/reserve-plus.jpg"
+import workPethealth from "../assets/works/pethealth.jpg"
+import workMinaMonitor from "../assets/works/mina-monitor.jpg"
+import workAiki from "../assets/works/aiki.jpg"
 ---
+<DefaultPage title="Сайт Сергія Піменова">
+	<div class="container-fluid">
+        <div class="container">
+            <div class="hero">
+                <div class="row" style="--grid-gutter: 40px;">
+                    <div class="cell-md-6 d-flex flex-justify-center flex-column">
+                        <h1 class="text-header">Сергій Піменов</h1>
+                        <div class="text-subheader mt-6 mb-6">
+                            <div><span class="text-bold fg-orange">Веб</span> розробник із Києва, Україна</div>
+                        </div>
+                        <div class="d-flex flex-row flex-no-wrap h5">
+                            <div class="mr-2 fg-gray">Я пропоную:</div>
+                            <div data-role="typer" data-cursor="&block;" data-delete-delay=3000 class="text-bold fg-orange">
+                                Розробку веб сайтів,
+                                Супровід сайтів,
+                                Консультації,
+                                Контроль виконання ТЗ,
+                                Хостінг сайтів
+                            </div>
+                        </div>
+                        <div class="mt-6">
+                            <a href="/files/pimenov.cv.pdf" class="button info rounded small">Моє резюме</a>
+                            <a href="https://github.com/olton" class="button success rounded small">GitHub</a>
+                            <a href="https://profile.codersrank.io/user/olton/" class="button alert rounded small">CodersRank</a>
+                        </div>
+                    </div>
+                    <div class="cell-md-6 d-flex flex-align-center flex-justify-center">
+                        <div class="my-hero-photo">
+                            <Image src={MyPhoto} alt="" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+    <div class="container-fluid accent-block" id="_about">
+        <div class="container pt-20 pb-20">
+            <div class="row">
+                <div class="cell-lg-4 d-flex flex-align-center flex-justify-center">
+                    <div class="box-photo">
+                        <Image src={MyPhoto2} alt=""/>
+                    </div>
+                </div>
+                <div class="cell-lg-7 pl-10-lg">
+                    <div class="section-header about">
+                        <div class="text-upper text-bold">[ Про <span class="fg-orange">мене</span> ]</div>
+                    </div>
+                    <div class="mt-6">
+                        Привіт! Мене звати Сергій Піменов. Я веб-розробник із Києва, Україна і я дуже захоплений і відданий своїй роботі.
+                        <p class="mt-4">Я маю більш ніж 25-річний досвід роботи програмістом і понад 10 з них це професійна веб-розробка.
+                        <p class="mt-4">Зараз я спеціалізуюся на створенні веб-компонентів за допомогою HTML, JavaScript і CSS а також сайтів з використанням Astro та Metro UI.
+                    </div>
+                    <div class="mt-6">
+                        <button class="button warning rounded">Зв'яжіться зі мною...</button>
+                        <button class="button info rounded">Моє резюме</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid" id="_services">
+        <div class="container pt-20 pb-20">
+            <div>
+                <div class="section-header services">
+                    <div class="text-upper text-bold">[ МОЇ <span class="fg-orange">ПОСЛУГИ</span> ]</div>
+                </div>
+            </div>
+            <div class="row mt-6" style="--grid-gutter: 40px;">
+                <div class="cell-lg-4">
+                    <div class="service-box">
+                        <div class="service-box-inner">
+                            <div class="service-icon"><span class="mif-designing"></span></div>
+                            <div class="service-title">Веб Розробка</div>
+                            <div class="service-desc">Розробка сайтів, компонентів сайтів, бібліотек веб компонентів.</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cell-lg-4">
+                    <div class="service-box">
+                        <div class="service-box-inner">
+                            <div class="service-icon"><span class="mif-support_agent"></span></div>
+                            <div class="service-title">Консалтінг</div>
+                            <div class="service-desc">Консультації щодо розробки та супроводу сайтів, контроль виконання ТЗ.</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cell-lg-4">
+                    <div class="service-box">
+                        <div class="service-box-inner">
+                            <div class="service-icon"><span class="mif-roofing"></span></div>
+                            <div class="service-title">Хостінг</div>
+                            <div class="service-desc">Публікація сайтів на довіреному хостингу, обслуговування сайту.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid mt-20 mb-20 accent-block" id="_skills">
+        <div class="container pt-10 pb-10">
+            <div class="section-header services">
+                <div class="text-upper text-bold text-center">[ МОЇ <span class="fg-orange">НАВИЧКИ</span> ]</div>
+            </div>
+            <div class="row flex-justify-center mt-6">
+                <div class="skill"></div>
+                <div class="skill" title="javascript">
+                    <span class="mif-javascript fg-orange"></span>
+                </div>
+                <div class="skill"></div>
+                <div class="skill" title="git">
+                    <img src="/images/Git.svg" />
+                </div>
+                <div class="skill"></div>
+                <div class="skill" title="typescript">
+                    <span class="mif-typescript fg-teal"></span>
+                </div>
+                <div class="skill" title="rollup">
+                    <img src="/images/Rollup.js.svg" />
+                </div>
+                <div class="skill"></div>
+                <div class="skill"></div>
+                <div class="skill" title="sql">
+                    <span class="mif-sql"></span>
+                </div>
+                <div class="skill"></div>
+                <div class="skill"></div>
+                <div class="skill" title="mysql">
+                    <span class="mif-mysql fg-cyan"></span>
+                </div>
+                <div class="skill" title="jquery та m4q">
+                    <img src="/images/jQuery.svg" />
+                </div>
+                <div class="skill"></div>
+                <div class="skill" title="Node.js">
+                    <img src="/images/Node.js.svg" />
+                </div>
+                <div class="skill"></div>
+                <div class="skill" title="graphql">
+                    <span class="mif-graphql fg-pink"></span>
+                </div>
+                <div class="skill" title="webpack">
+                    <img src="/images/Windows%2011.svg" />
+                </div>
+                <div class="skill"></div>
+                <div class="skill" title="webpack">
+                    <img src="/images/Linux.svg" />
+                </div>
+                <div class="skill" title="webpack">
+                    <img src="/images/Webpack.svg" />
+                </div>
+                <div class="skill"></div>
+                <div class="skill" title="PostgreSQL">
+                    <span class="mif-postgresql fg-cyan"></span>
+                </div>
+                <div class="skill"></div>
+                <div class="skill" title="Html5">
+                    <span class="mif-html5 fg-red"></span>
+                </div>
+                <div class="skill"></div>
+                <div class="skill" title="Bash">
+                    <img src="/images/Bash.svg" />
+                </div>
+                <div class="skill"></div>
+                <div class="skill" title="Angular">
+                    <img src="/images/Angular.svg" />
+                </div>
+                <div class="skill"></div>
+                <div class="skill" title="React">
+                    <img src="/images/React.svg" />
+                </div>
+                <div class="skill"></div>
+                <div class="skill" title="Rust">
+                    <img src="/images/Rust.svg" />
+                </div>
+                <div class="skill"></div>
+                <div class="skill" title="Astro.build">
+                    <img src="/images/Astro.svg" />
+                </div>
+                <div class="skill"></div>
+                <div class="skill" title="Css3">
+                    <span class="mif-css3 fg-green"></span>
+                </div>
+                <div class="skill" title="Less">
+                    <img src="/images/Less.js.svg" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid mt-20 mb-20" id="_projects">
+        <div class="container">
+            <div class="section-header services">
+                <div class="text-upper text-bold text-center">[ МОЇ <span class="fg-orange">ПРОЕКТИ</span> ]</div>
+            </div>
+            <div class="text-center pl-20-md pr-20-md mt-6 mb-6">
+                Я насолоджуюся кожним етапом процесу розробки, від обговорення концепції до безпосереднього виконання, але найбільше задоволення я отримую, коли бачу, як готовий продукт робить для вас усе, для чого він був створений.
+            </div>
+            <div class="text-center reduce-2 text-muted">
+                Нижче наведені приклади моїх робот
+            </div>
+            <div class="row mt-10" style="--grid-gutter: 20px;">
+                <div class="cell-md-3 cell-sm-6">
+                    <div class="work-preview">
+                        <div class="work-title">Pet проект (Metro UI)</div>
+                        <a href="https://metroui.org.ua">
+                            <Image src={workMetroui} alt="Metroui.org.ua" style="width: 100%; height: auto;"/>
+                        </a>
+                    </div>
+                    <div class="arrow"><span class="mif-arrow-right mif-4x"></span></div>
+                </div>
+                <div class="cell-md-3 cell-sm-6">
+                    <div class="work-preview">
+                        <div class="work-title">Minataur.net</div>
+                        <a href="https://minataur.net">
+                            <Image src={workMinataur} alt="Minataur.net" style="width: 100%; height: auto;"/>
+                        </a>
+                    </div>
+                    <div class="arrow"><span class="mif-arrow-right mif-4x"></span></div>
+                </div>
+                <div class="cell-md-3 cell-sm-6">
+                    <div class="work-preview">
+                        <div class="work-title">Korzh.com</div>
+                        <a href="https://korzh.com">
+                            <Image src={workKorzh} alt="Korzh.com" style="width: 100%; height: auto;"/>
+                        </a>
+                    </div>
+                    <div class="arrow"><span class="mif-arrow-right mif-4x"></span></div>
+                </div>
+                <div class="cell-md-3 cell-sm-6">
+                    <div class="work-preview">
+                        <div class="work-title">CryptoScamAlert.com</div>
+                        <a href="https://cryptoscamalert.com">
+                            <Image src={workCrypto} alt="Korzh.com" style="width: 100%; height: auto;"/>
+                        </a>
+                    </div>
+                    <div class="arrow"><span class="mif-arrow-right mif-4x"></span></div>
+                </div>
+                <div class="cell-md-3 cell-sm-6">
+                    <div class="work-preview">
+                        <div class="work-title">Pandora (Шаблон)</div>
+                        <a href="https://themes.org.ua/pandora">
+                            <Image src={workPandora} alt="Pandora" style="width: 100%; height: auto;"/>
+                        </a>
+                    </div>
+                    <div class="arrow"><span class="mif-arrow-right mif-4x"></span></div>
+                </div>
+                <div class="cell-md-3 cell-sm-6">
+                    <div class="work-preview">
+                        <div class="work-title">Резерв+ (Site)</div>
+                        <a href="https://reserveplus.mod.gov.ua/">
+                            <Image src={workReserve} alt="Korzh.com" style="width: 100%; height: auto;"/>
+                        </a>
+                    </div>
+                    <div class="arrow"><span class="mif-arrow-right mif-4x"></span></div>
+                </div>
+                <div class="cell-md-3 cell-sm-6">
+                    <div class="work-preview">
+                        <div class="work-title">Сайт ветклініки</div>
+                        <a href="https://pethealth.com.ua/">
+                            <Image src={workPethealth} alt="Pethealth.com.ua" style="width: 100%; height: auto;"/>
+                        </a>
+                    </div>
+                    <div class="arrow"><span class="mif-arrow-right mif-4x"></span></div>
+                </div>
+                <div class="cell-md-3 cell-sm-6">
+                    <div class="work-preview">
+                        <div class="work-title">Mina Monitor</div>
+                        <a href="https://github.com/olton/mina-node-monitor">
+                            <Image src={workMinaMonitor} alt="Mina Monitor" style="width: 100%; height: auto;"/>
+                        </a>
+                    </div>
+                    <div class="arrow"><span class="mif-arrow-right mif-4x"></span></div>
+                </div>
+                <div class="cell-md-3 cell-sm-6">
+                    <div class="work-preview">
+                        <div class="work-title">Aiki.in.ua</div>
+                        <a href="https://aiki.in.ua">
+                            <Image src={workAiki} alt="Aiki.in.ua" style="width: 100%; height: auto;"/>
+                        </a>
+                    </div>
+                    <div class="arrow"><span class="mif-arrow-right mif-4x"></span></div>
+                </div>
+                <div class="cell-md-3 cell-sm-6 border bd-orange border-radius-20 no-overflow d-flex flex-align-center flex-justify-center">
+                    <div class="p-10">Більше проектів на <a href="https://github.com/olton">GitHub<span>...</span></a></div>
+                </div>
+                <div class="cell-md-3 cell-sm-6 border bd-orange border-radius-20 no-overflow d-flex flex-align-center flex-justify-center">
+                    <div class="p-10">Можливо Ваш сайт буде наступним?...</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid accent-block" id="_contacts">
+        <div class="container pt-10 pb-10">
+            <div class="row">
+                <div class="cell-md-6">
+                    <div>
+                        <div class="section-header services">
+                            <div class="ml-4 reduce-2 text-upper text-bold">ЗАГАЛЬНІ <span class="fg-orange">ДАНІ</span></div>
+                        </div>
+                        <ul class="my-data">
+                            <li><label>Вік:</label> <span id="_age">51</span></li>
+                            <li><label>Місто:</label> Київ, Україна</li>
+                            <li><label>Хобі:</label> Собаки, Стрільба, Музика</li>
+                            <li><label>Освіта:</label> Бакалавр права, Taurida Institute of MCL</li>
+                            <li><label>Email:</label> <a href="mailto:serhii@pimenov.com.ua" class="fg-dark">serhii@pimenov.com.ua</a></li>
+                            <li><label>Telegram:</label> <a href="https://t.me/serhii_pimenov" class="fg-dark">@serhii_pimenov</a></li>
+                        </ul>
+                        <script>
+                            const age = document.querySelector('#_age');
+                            age.innerHTML = new Date().getFullYear() - 1972
+                        </script>
+                    </div>
+                </div>
+                <div class="cell-md-6 text-center-fs text-right-md">
+                    <img src="/images/artworks-2d49337a.jpg" style="height: 200px;" class="border-radius-20 border bd-orange" />
+                </div>
+            </div>
+        </div>
+    </div>
+</DefaultPage>
