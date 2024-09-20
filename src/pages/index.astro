@@ -60,14 +60,18 @@ import workAiki from "../assets/works/aiki.jpg"
                     </div>
                     <div class="mt-6">
                         Привіт! Мене звати Сергій Піменов. Я веб-розробник із Києва, Україна і я дуже захоплений і відданий своїй роботі.
-                        <p class="mt-4">Я маю більш ніж 25-річний досвід роботи програмістом і понад 10 з них це професійна веб-розробка.
-                        <p class="mt-4">Зараз я спеціалізуюся на створенні веб-компонентів за допомогою HTML, JavaScript і CSS а також сайтів з використанням Astro та Metro UI.
-                    </div>
-                    <div class="mt-6">
-                        <a href="#_contacts" class="button warning rounded small">Зв'яжиться зі мною</a>
-                        <a href="/files/pimenov.cv.pdf" class="button info rounded small">Моє резюме</a>
-                        <a href="https://github.com/olton" class="button success rounded small">Мій GitHub</a>
-                        <a href="https://profile.codersrank.io/user/olton/" class="button alert rounded small">CodersRank Profile</a>
+                        <div class="mt-4">Я маю більш ніж 25-річний досвід роботи програмістом і понад 10 з них це професійна веб-розробка.</div>
+                        <div class="remark border-radius-20">
+                            <div>
+                                <ul class="my-data reduce-2 p-0">
+                                    <li><label style="width: 80px;">Вік:</label> <span id="_age">{new Date().getFullYear() - 1972}</span></li>
+                                    <li><label style="width: 80px;">Місто:</label> Київ, Україна</li>
+                                    <li><label style="width: 80px;">Хобі:</label> Собаки, Стрільба, Музика, Фантастика</li>
+                                    <li><label style="width: 80px;">Освіта:</label> Бакалавр права, Taurida Institute of MCL</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="mt-4">Зараз я спеціалізуюся на створенні веб-компонентів за допомогою HTML, JavaScript і CSS а також сайтів з використанням Astro та Metro UI.</div>
                     </div>
                 </div>
             </div>
@@ -313,24 +317,20 @@ import workAiki from "../assets/works/aiki.jpg"
                 <div class="cell-md-6">
                     <div>
                         <div class="section-header services">
-                            <div class="ml-4 reduce-2 text-upper text-bold">ЗАГАЛЬНІ <span class="fg-orange">ДАНІ</span></div>
+                            <div class="ml-4 reduce-2 text-upper text-bold">МОЇ <span class="fg-orange">КОНТАКТИ</span></div>
                         </div>
                         <ul class="my-data">
-                            <li><label>Вік:</label> <span id="_age">51</span></li>
-                            <li><label>Місто:</label> Київ, Україна</li>
-                            <li><label>Хобі:</label> Собаки, Стрільба, Музика</li>
-                            <li><label>Освіта:</label> Бакалавр права, Taurida Institute of MCL</li>
                             <li><label>Email:</label> <a href="mailto:serhii@pimenov.com.ua" class="fg-dark">serhii@pimenov.com.ua</a></li>
                             <li><label>Telegram:</label> <a href="https://t.me/serhii_pimenov" class="fg-dark">@serhii_pimenov</a></li>
+                            <li><label>CodersRank:</label> <a href="https://profile.codersrank.io/user/olton/" class="fg-dark">#olton</a></li>
+                            <li><label>GitHub:</label> <a href="https://github.com/olton/" class="fg-dark">github.com/olton</a></li>
+                            <li><label>Linkedin:</label> <a href="https://www.linkedin.com/in/spimenov/" class="fg-dark">spimenov</a></li>
+                            <li><label>Телефон:</label> <a href="tel:+380635022967" class="fg-dark">+380635022967</a></li>
                         </ul>
-                        <script>
-                            const age = document.querySelector('#_age');
-                            age.innerHTML = new Date().getFullYear() - 1972
-                        </script>
                     </div>
                 </div>
                 <div class="cell-md-6 text-center-fs text-right-md">
-                    <img src="/images/artworks-2d49337a.jpg" style="height: 200px;" class="border-radius-20 border bd-orange" />
+                    <img src="/images/artworks-2d49337a.jpg" alt="" style="height: 200px;" class="border-radius-20 border bd-orange" />
                 </div>
             </div>
         </div>
