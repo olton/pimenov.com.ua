@@ -44,6 +44,8 @@
 body {
     font-family: var(--font-regular), -apple-system, system-ui, BlinkMacSystemFont, Segoe UI, Roboto, Ubuntu, Helvetica Neue, sans-serif;
     padding-top: 62px;
+    display: flex;
+    flex-flow: column;
 }
 
 .text-header {
@@ -246,6 +248,8 @@ body {
 footer {
     background: coral;
     color: #fff;
+    margin-top: auto;
+    width: 100%;
 }
 
 .my-data {
@@ -261,4 +265,8 @@ footer {
         width: 120px;
         color: #4b626d;
     }
+}
+
+.container {
+    max-width: 1200px;
 }

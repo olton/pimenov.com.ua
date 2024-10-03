@@ -1,0 +1,115 @@
+---
+import Page from "../../layouts/DefaultPage.astro"
+import { getCollection, getEntries } from 'astro:content';
+import CloudTags from "../../components/CloudTags.astro";
+import PostLinks from "../../components/PostLinks.astro";
+import RecentPosts from "../../components/RecentPosts.astro";
+import ShareThis from "../../components/ShareThis.astro";
+import Rss from "../../components/RssChanels.astro";
+import TableOfContents from "../../components/TOC.astro";
+import {datetime} from "@olton/datetime";
+import { Image } from 'astro:assets'
+import {slugify, filterPosts, tagsWeight} from "../../js/utils.js";
+
+export async function getStaticPaths() {
+    const blogEntries = await getCollection('blog');
+    return blogEntries.map(entry => ({
+        params: { slug: entry.slug }, props: { entry },
+    }));
+}
+
+const { entry, data, timeToRead } = Astro.props;
+const { Content, headings, remarkPluginFrontmatter } = await entry.render();
+const {title, date, cover, category, relatedPosts} = entry.data
+
+const relPosts = relatedPosts ? await getEntries(relatedPosts) : []
+const recentPosts = filterPosts(await getCollection('blog'), {limit: 4})
+const allPosts = filterPosts(await getCollection('blog'))
+const cloudTags = tagsWeight(allPosts)
+---
+<Page title={title + " : Блог ОСББ Три сусіди 1"}>
+    <section class="container-fluid pt-6">
+        <div class="container">
+            <div class="row">
+                <div class="cell-md-8 border-right bd-default">
+                    <div class="pr-4">
+                        <h1 class="post-title text-bold">
+                            <a class="history-back reduce-2 fg-dark" href="#"><span class="mif-arrow-left"></span></a>
+                            {title}
+                        </h1>
+                        <div class="mb-4 text-muted reduce-1 d-flex flex-row border-top border-bottom bd-default pt-4 pb-3">
+                            <span>Категорія: </span><a class="button small rounded ml-2" href=`/blog/categories/${slugify(category)}`>{category}</a>
+                            <div class="ml-auto">{datetime(date).format("DD, MMM YYYY")} &bull; {timeToRead}</div>
+                        </div>
+                        <div class:list={["blog-post-image", {"d-none": !cover.src}]}>
+                            <Image src={cover.src} alt={cover.alt} width="1200" height="100" class="blog-cover" format="avif"/>
+                        </div>
+                        <div class="post-content mt-4">
+                            <Content/>
+                        </div>
+                        <hr/>
+                        <section class="mt-10 giscus"></section>
+                    </div>
+                </div>
+                <div class="cell-md-4">
+                    <div class="pl-4 pr-4">
+                        <div class="mt-4">
+                            <div class="text-bold enlarge-1 border-bottom bd-default">Зміст статті</div>
+                            <TableOfContents headings={headings} />
+                        </div>
+                        <div class="mt-6">
+                            <div class="text-bold border-bottom bd-default">Схожі статті</div>
+                            {
+                                relPosts.length === 0 ? <div class="reduce-1 text-muted">Нічого немає</div> : <PostLinks posts={relPosts}/>
+                            }
+                        </div>
+
+                        <div class="blog-sidebar-group">
+                            <div class="text-bold border-bottom bd-default">Хмара тегів</div>
+                            <CloudTags tags={cloudTags} />
+                        </div>
+
+                        <div class="mt-6">
+                            <div class="text-bold border-bottom bd-default">Поділитися</div>
+                            <ShareThis/>
+                        </div>
+
+                        <div class="blog-sidebar-group">
+                            <Rss/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container-fluid mt-4 mb-10">
+        <div class="container border-top bd-default pt-4 ">
+            <ShareThis/>
+        </div>
+        <div class="container d-none">
+            <RecentPosts posts={recentPosts} label="Recent posts:"/>
+        </div>
+    </section>
+</Page>
+
+<style is:global>
+    @import "../../styles/blog.css";
+</style>
+
+<script is:inline src="https://giscus.app/client.js"
+        data-repo="olton/trysusidy"
+        data-repo-id="R_kgDOMaLhKA"
+        data-category="General"
+        data-category-id="DIC_kwDOMaLhKM4ChgoW"
+        data-mapping="title"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="light"
+        data-lang="uk"
+        data-loading="lazy"
+        crossorigin="anonymous"
+        async>
+</script>

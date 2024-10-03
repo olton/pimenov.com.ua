@@ -36,6 +36,7 @@ const news = defineCollection({
         description: z.string().optional(),
         date: z.date(),
         important: z.boolean().default(false),
+        url: z.string().optional(),
     })
 })
 
