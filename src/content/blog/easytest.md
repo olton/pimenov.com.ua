@@ -11,8 +11,7 @@ slug: easytest-welcome
 draft: false
 ---
 
-Сайт автора: https://pimenov.com.ua
-Репозиторій EasyTest: https://github.com/olton/easytest
+> Репозиторій EasyTest: https://github.com/olton/easytest
 
 ## Вступ
 
