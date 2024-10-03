@@ -337,7 +337,7 @@ describe(`Accordion tests`, () => {
 
 Ще більше тестів ви знайдете за посиланням: https://github.com/olton/easytest/tree/master/__tests__
 
-### Висновок
+## Висновок
 Проєкт вийшов дуже цікавим, дозволив отримати нові знання та поглибити наявні навички в JavaScript.
 
 Посилання на GitHub - https://github.com/olton/easytest
