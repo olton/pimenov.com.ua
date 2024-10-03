@@ -1,5 +1,3 @@
-const TOKEN = `e520c17d-f28e-4154-bfe9-278c78f54fd4`
-
 globalThis.sendRequestForAdsBlock = async (form) => {
     const result = await Email.send({
         SecureToken : TOKEN,
