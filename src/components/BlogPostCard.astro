@@ -9,13 +9,18 @@ const { remarkPluginFrontmatter } = await render();
 ---
 
 <article class="mb-5 border-bottom bd-default pb-5">
-    <div class="text-muted reduce-1 place-right">
+    <div class="text-muted reduce-1 ">
         <div class="datetime">{datetime(date).format("DD/MM/YYYY", "ua")} &bull; {remarkPluginFrontmatter.time}</div>
     </div>
 
-    <Image src={cover.src} alt={cover.alt} width="1200" height="100" class="blog-cover" format="avif"/>
-
-    <a class="h3 no-decor d-block mt-4" href=`/blog/${slug}`>{title}</a>
+    <div class="row border bd-lightOrange border-radius-20 mr-1 border-dashed">
+        <div class="cell-md-4">
+            <Image src={cover.src} alt={cover.alt} width="1200" height="100" class="blog-cover" format="avif"/>
+        </div>
+        <div class="cell-md-8 d-flex flex-align-center">
+            <a class="h3 no-decor d-block mt-4 w-100" href=`/blog/${slug}`>{title}</a>
+        </div>
+    </div>
 
     <div class="mt-4 mb-4" set:html={createExcerpt(body)}></div>
 

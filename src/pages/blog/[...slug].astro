@@ -33,16 +33,22 @@ const cloudTags = tagsWeight(allPosts)
             <div class="row">
                 <div class="cell-md-8 border-right bd-default">
                     <div class="pr-4">
-                        <h1 class="post-title text-bold">
-                            <a class="history-back reduce-2 fg-dark" href="#"><span class="mif-arrow-left"></span></a>
-                            {title}
-                        </h1>
+                        <div class="row">
+                            <div class="cell-md-8 d-flex flex-align-center">
+                                <h3 class="post-title text-bold">
+                                    <a class="history-back reduce-2 fg-dark" href="#"><span class="mif-arrow-left"></span></a>
+                                    {title}
+                                </h3>
+                            </div>
+                            <div class="cell-md-4">
+                                <div class:list={["blog-post-image", {"d-none": !cover.src}]}>
+                                    <Image src={cover.src} alt={cover.alt} width="1200" height="100" class="blog-cover" format="avif"/>
+                                </div>
+                            </div>
+                        </div>
                         <div class="mb-4 text-muted reduce-1 d-flex flex-row border-top border-bottom bd-default pt-4 pb-3">
                             <span>Категорія: </span><a class="button small rounded ml-2" href=`/blog/categories/${slugify(category)}`>{category}</a>
                             <div class="ml-auto">{datetime(date).format("DD, MMM YYYY")} &bull; {timeToRead}</div>
-                        </div>
-                        <div class:list={["blog-post-image", {"d-none": !cover.src}]}>
-                            <Image src={cover.src} alt={cover.alt} width="1200" height="100" class="blog-cover" format="avif"/>
                         </div>
                         <div class="post-content mt-4">
                             <Content/>
@@ -96,6 +102,13 @@ const cloudTags = tagsWeight(allPosts)
 <style is:global>
     @import "../../styles/blog.css";
 </style>
+
+<script>
+    $(".history-back").on("click", function(e){
+        e.preventDefault();
+        window.history.back();
+    });
+</script>
 
 <script is:inline src="https://giscus.app/client.js"
         data-repo="olton/trysusidy"
