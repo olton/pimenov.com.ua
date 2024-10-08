@@ -1,0 +1,35 @@
+on: push
+name: 🚀 Deploy website on push
+jobs:
+  web-deploy:
+    name: 🎉 Deploy
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [ '22.x' ]
+
+    steps:
+      - name: 🚚 Get latest code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: 📦 Build Site
+        run: npm run build
+
+      - name: 📂 Deploy files
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: eg77.mirohost.net
+          server-dir: pimenov.com.ua/
+          local-dir: dist/
+          username: pimenov
+          password: ${{ secrets.FTP_PASSWORD }}
