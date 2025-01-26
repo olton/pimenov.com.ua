@@ -27,7 +27,7 @@ const recentPosts = filterPosts(await getCollection('blog'), {limit: 4})
 const allPosts = filterPosts(await getCollection('blog'))
 const cloudTags = tagsWeight(allPosts)
 ---
-<Page title={title + " : Блог Сергія Піменова"}>
+<Page title={title + " : Serhii Pimenov's blog"}>
     <section class="container-fluid pt-6">
         <div class="container">
             <div class="row">
@@ -47,7 +47,7 @@ const cloudTags = tagsWeight(allPosts)
                             </div>
                         </div>
                         <div class="mb-4 text-muted reduce-1 d-flex flex-row border-top border-bottom bd-default pt-4 pb-3">
-                            <span>Категорія: </span><a class="button small rounded ml-2" href=`/blog/categories/${slugify(category)}`>{category}</a>
+                            <span>Category: </span><a class="button small rounded ml-2" href=`/blog/categories/${slugify(category)}`>{category}</a>
                             <div class="ml-auto">{datetime(date).format("DD, MMM YYYY")} &bull; {timeToRead}</div>
                         </div>
                         <div class="post-content mt-4">
@@ -60,23 +60,23 @@ const cloudTags = tagsWeight(allPosts)
                 <div class="cell-md-4">
                     <div class="pl-4 pr-4">
                         <div class="mt-4">
-                            <div class="text-bold enlarge-1 border-bottom bd-default">Зміст статті</div>
+                            <div class="text-bold enlarge-1 border-bottom bd-default">Content of the article</div>
                             <TableOfContents headings={headings} />
                         </div>
                         <div class="mt-6">
-                            <div class="text-bold border-bottom bd-default">Схожі статті</div>
+                            <div class="text-bold border-bottom bd-default">Similar articles</div>
                             {
-                                relPosts.length === 0 ? <div class="reduce-1 text-muted">Нічого немає</div> : <PostLinks posts={relPosts}/>
+                                relPosts.length === 0 ? <div class="reduce-1 text-muted">There is nothing</div> : <PostLinks posts={relPosts}/>
                             }
                         </div>
 
                         <div class="blog-sidebar-group">
-                            <div class="text-bold border-bottom bd-default">Хмара тегів</div>
+                            <div class="text-bold border-bottom bd-default">Tags cloud</div>
                             <CloudTags tags={cloudTags} />
                         </div>
 
                         <div class="mt-6">
-                            <div class="text-bold border-bottom bd-default">Поділитися</div>
+                            <div class="text-bold border-bottom bd-default">To Share</div>
                             <ShareThis/>
                         </div>
 

@@ -22,7 +22,7 @@ export async function getStaticPaths({ paginate }) {
 }
 const { page } = Astro.props;
 ---
-<PageLayout title="Блог Сергія Піменова">
+<PageLayout title="Serhii Pimenov's blog">
     <section class="container-fluid pb-4 pt-6">
         <div class="container">
             <div class="row" style="--grid-gutter: 40px;">
@@ -46,7 +46,7 @@ const { page } = Astro.props;
                 <div class="cell-md-4">
                     <div class="border-left bd-default pl-4 pr-4">
                         <h1 class="d-flex flex-row flex-nowrap flex-align-center">
-                            <span>Блог</span>
+                            <span>Blog</span>
                             <span class="posts-counter ml-auto">{allPosts.length}</span>
                         </h1>
 
@@ -55,18 +55,18 @@ const { page } = Astro.props;
                         </div>
 
                         <div class="blog-sidebar-group">
-                            Я дуже радий, що ви тут! Я наполегливо працюю над тим, щоб ділитися історіями що надихають, професійними ідеями та важливими оновленнями в своїй діяльності.
+                            I'm so glad you're here! I work hard to share inspiring stories, professional insights and important updates in my business.
                         </div>
 
                         <div class="blog-sidebar-group">
-                            <div class="text-bold border-bottom bd-default">Випадкові публікації</div>
+                            <div class="text-bold border-bottom bd-default">Random publications</div>
                             {
                                 randomPosts && <PostLinks posts={randomPosts} />
                             }
                         </div>
 
                         <div class="blog-sidebar-group">
-                            <div class="text-bold border-bottom bd-default">Хмара тегів</div>
+                            <div class="text-bold border-bottom bd-default">Tags cloud</div>
                             <CloudTags {tags} />
                         </div>
 
