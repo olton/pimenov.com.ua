@@ -3,7 +3,7 @@
 ---
 <aside>
     <form id="search-form" class="form mt-4" action="javascript:">
-        <input type="search" name="search" id="search" placeholder="Пошук..." data-role="input" data-search-button="true"/>
+        <input type="search" name="search" id="search" placeholder="Search in blog..." data-role="input" data-search-button="true"/>
     </form>
 </aside>
 <script>
@@ -12,7 +12,7 @@
     const form = document.querySelector("#search-form")
 
     form.addEventListener("submit", function(e){
-        const formData = new FormData(form[0])
+        const formData = new FormData(form)
         const searchTerm = DOMPurify.sanitize(formData.get("search").toString())
         if (!searchTerm.trim()|| searchTerm.length === 0) {
             return false

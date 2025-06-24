@@ -1,5 +1,5 @@
 ---
-title: "Model: A Reactive mode with two way binding"
+title: "Model: A Reactive model with two way binding"
 author: "Serhii Pimenov"
 date: 2025-06-24
 cover: {
