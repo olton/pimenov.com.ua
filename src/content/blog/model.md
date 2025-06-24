@@ -19,7 +19,7 @@ Welcome to this comprehensive guide on `Model`, a powerful JavaScript library fo
 
 <!-- -->
 
-## What is `Model`?
+## What is Model?
 
 `Model` is a lightweight JavaScript library that provides a reactive data model with two-way data binding capabilities. It allows you to create dynamic web applications where the UI automatically updates when the underlying data changes, and vice versa. This eliminates the need for manual DOM manipulation and helps you write cleaner, more maintainable code.
 
