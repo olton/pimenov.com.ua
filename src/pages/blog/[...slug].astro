@@ -20,7 +20,7 @@ export async function getStaticPaths() {
 
 const { entry, data, timeToRead } = Astro.props;
 const { Content, headings, remarkPluginFrontmatter } = await entry.render();
-const {title, date, cover, category, relatedPosts} = entry.data
+const {title, date, cover, category, relatedPosts, tags} = entry.data
 
 const relPosts = relatedPosts ? await getEntries(relatedPosts) : []
 const recentPosts = filterPosts(await getCollection('blog'), {limit: 4})
@@ -71,6 +71,13 @@ const cloudTags = tagsWeight(allPosts)
                         </div>
 
                         <div class="blog-sidebar-group">
+                            <div class="text-bold border-bottom bd-default">Post Tags</div>
+                            <div class="mt-4 d-flex gap-1 flex-wrap">
+                                {tags && tags.map(tag => <a class="tag-link reduce-3" href=`/blog/tags/${tag}`>#{tag}</a>)}
+                            </div>
+                        </div>
+
+                        <div class="blog-sidebar-group">
                             <div class="text-bold border-bottom bd-default">Tags cloud</div>
                             <CloudTags tags={cloudTags} />
                         </div>
@@ -110,19 +117,18 @@ const cloudTags = tagsWeight(allPosts)
     });
 </script>
 
-<script is:inline src="https://giscus.app/client.js"
-        data-repo="olton/trysusidy"
-        data-repo-id="R_kgDOMaLhKA"
+<script src="https://giscus.app/client.js"
+        data-repo="olton/pimenov-blog-comments"
+        data-repo-id="R_kgDOPBKbSw"
         data-category="General"
-        data-category-id="DIC_kwDOMaLhKM4ChgoW"
-        data-mapping="title"
+        data-category-id="DIC_kwDOPBKbS84Cr7s0"
+        data-mapping="pathname"
         data-strict="0"
         data-reactions-enabled="1"
-        data-emit-metadata="1"
-        data-input-position="top"
+        data-emit-metadata="0"
+        data-input-position="bottom"
         data-theme="light"
-        data-lang="uk"
-        data-loading="lazy"
+        data-lang="en"
         crossorigin="anonymous"
         async>
 </script>

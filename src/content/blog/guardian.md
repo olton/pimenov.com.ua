@@ -6,8 +6,8 @@ cover: {
     src: "/images/blog/police-45.svg"
 }
 description: "Guardian is a powerful, lightweight JavaScript library designed for data validation."
-tags: ["javascript", "user input"]
-category: "Web Development"
+tags: ["javascript", "user input", "validation", "library"]
+category: "JavaScript Libraries"
 slug: guardian
 ---
 

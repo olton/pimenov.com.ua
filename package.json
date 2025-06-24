@@ -12,9 +12,11 @@
   },
   "dependencies": {
     "@astrojs/mdx": "^4.3.0",
+    "@expressive-code/plugin-line-numbers": "^0.41.2",
     "@olton/metroui": "^5.1.7",
     "@rollup/plugin-node-resolve": "^16.0.1",
     "astro": "^5.10.1",
+    "astro-expressive-code": "^0.41.2",
     "less": "^4.3.0",
     "markdown-it": "^14.1.0",
     "mdast-util-to-string": "^4.0.0",

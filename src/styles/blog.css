@@ -154,11 +154,22 @@ ol {
     list-style: decimal;
 }
 
+.tag-link {
+    border: 1px solid #dadada;
+    border-radius: 4px;
+    padding: 0 4px;
+    color: #707070;
+    text-decoration: none;
+    &:hover {
+        color: #000000;
+    }
+}
+
 .cloud-tags {
+    font-size: 8px;
     margin: 10px 0;
     padding: 0;
     list-style: none inside;
-    font-size: 8px;
     display: flex;
     flex-flow: row wrap;
 
@@ -167,9 +178,6 @@ ol {
         align-items: center;
         white-space: nowrap;
         margin: 2px;
-        border: 1px solid #dadada;
-        border-radius: 4px;
-        padding: 0 4px;
     }
 
     li.tag-weight-1 { font-size: 1em; }
@@ -182,15 +190,8 @@ ol {
     li.tag-weight-8 { font-size: 1.7em; }
     li.tag-weight-9 { font-size: 1.8em; }
     li.tag-weight-10 { font-size: 1.9em; }
-
-    .tag-link {
-        color: #707070;
-        text-decoration: none;
-        &:hover {
-            color: #000000;
-        }
-    }
 }
+
 
 .post-links {
     list-style: none inside;
@@ -272,8 +273,24 @@ mark {
     }
 }
 
-.astro-code {
+.expressive-code {
     margin: 20px 0;
-    padding: 20px;
     border-radius: 10px;
+    background: #f0f0f0;
+    border: 1px solid #dcdcdc;
+}
+
+.post-link-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    
+    img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+        border: 1px solid orange;
+        object-fit: cover;
+    }
 }
