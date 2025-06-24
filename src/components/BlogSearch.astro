@@ -9,9 +9,9 @@
 <script>
     import DOMPurify from "dompurify"
 
-    const form = $("#search-form")
+    const form = document.querySelector("#search-form")
 
-    form.on("submit", function(e){
+    form.addEventListener("submit", function(e){
         const formData = new FormData(form[0])
         const searchTerm = DOMPurify.sanitize(formData.get("search").toString())
         if (!searchTerm.trim()|| searchTerm.length === 0) {
