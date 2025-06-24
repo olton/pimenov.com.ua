@@ -3,7 +3,7 @@ title: "Розробка zkApps на Mina: Посібник З Нульовим 
 author: "Serhii Pimenov"
 date: 2025-06-24
 cover: {
-    src: "/images/blog/mina-zkapps.jpg"
+    src: "/images/blog/zkapps.webp"
 }
 description: "Цей документ містить детальний огляд основних тем, ідей та фактів, пов'язаних із розробкою децентралізованих додатків з нульовим розголошенням (zkApps) на блокчейні Mina, базуючись на наданих джерелах."
 tags: ["blockchain", "mina", "zkapps"]
