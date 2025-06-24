@@ -20,7 +20,7 @@ const blog = defineCollection({
         cover: z.object({
             src: z.string(),
             alt: z.string().default('Alt text')
-        }),
+        }).optional(),
         draft: z.boolean().default(false),
         category: z.string().default('general'),
         tags: z.array(z.string()),

@@ -3,7 +3,7 @@ title: "Metro UI: A Comprehensive Guide for Beginner Programmers"
 author: "Serhii Pimenov"
 date: 2025-06-24
 cover: {
-    src: "/images/blog/metroui.png"
+    src: "/images/blog/css-9.svg"
 }
 description: "A comprehensive overview of Metro UI - a progressive front-end framework for creating high-performance responsive web applications"
 tags: ["javascript", "html", "css", "framework", "development", "frontend"]
