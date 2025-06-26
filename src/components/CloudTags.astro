@@ -3,6 +3,6 @@ const {tags} = Astro.props
 ---
 <ul class="cloud-tags">
     {
-        tags.map(tag => <li class=`tag-weight-${tag.weight}`><a class="tag-link" href=`/blog/tags/${tag.name}`>{tag.name}</a></li>)
+        tags.map(tag => <li class=`tag-weight-${tag.weight}`><a class="tag-link" href=`/blog/tags/${tag.name.toLowerCase()}`>{tag.name}</a></li>)
     }
 </ul>

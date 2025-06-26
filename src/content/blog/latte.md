@@ -13,6 +13,9 @@ slug: latte
 
 # Latte: Powerful Framework for Testing JavaScript Applications
 
+[Project Source](https://github.com/olton/latte) | [NPM Package](https://www.npmjs.com/package/@olton/latte) | [Documentation](https://latte.org.ua/)
+
+
 ## What is Latte?
 
 Latte (an abbreviation for "laconic testing") is a modern framework for testing applications written in JavaScript and TypeScript. Designed as an alternative to popular solutions such as Jest, Mocha, and Jasmine, Latte offers a simple yet powerful approach to testing [[1]](https://latte.org.ua/).

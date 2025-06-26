@@ -13,6 +13,8 @@ slug: mina-zkapp-overview
 
 # Розробка zkApps на Mina
 
+[Offsite](https://minaprotocol.com/) | [Documentation](https://docs.minaprotocol.com/)
+
 Цей документ містить детальний огляд основних тем, ідей та фактів, пов'язаних із розробкою децентралізованих додатків з нульовим розголошенням (zkApps) на блокчейні Mina.
 
 <!-- -->

@@ -6,14 +6,20 @@ cover: {
     src: "/images/blog/css-9.svg"
 }
 description: "A comprehensive overview of Metro UI - a progressive front-end framework for creating high-performance responsive web applications"
-tags: ["javascript", "html", "css", "framework", "development", "frontend"]
+tags: ["javascript", "html", "css", "framework", "development", "frontend", "ui", "library", "metroui"]
 category: "Frontend"
 slug: metroui
 ---
 
+# Metro UI: A Comprehensive Guide for Beginner Programmers
+
+[Project Source](https://github.com/olton/metroui) | [NPM Package](https://www.npmjs.com/package/@olton/metroui) | [Documentation](https://v5.metroui.org.ua/) | [Demo](https://panda.metroui.org.ua/) | [Offsite](https://metroui.org.ua/)
+
 ## Introduction
 
 Metro UI is a sleek, intuitive, and powerful front-end framework designed to make web development faster and easier. It's the first front-end component library built in the Metro Style design language (originally popularized by Microsoft), offering a clean, modern aesthetic for your web applications. This library is perfect for building responsive, mobile-first projects on the web.
+
+<!-- -->
 
 ## What Makes Metro UI Special?
 
@@ -22,8 +28,6 @@ Metro UI is a sleek, intuitive, and powerful front-end framework designed to mak
 - **Responsive Design**: Built with mobile-first principles for all screen sizes
 - **Modern Styling**: Clean, flat design based on the Metro design language
 - **Customizable**: Extensive theming options with CSS variables
-
-<!-- -->
 
 ## Getting Started
 

@@ -13,6 +13,8 @@ slug: farbe
 
 # Farbe: A Comprehensive Color Manipulation Library for JavaScript
 
+[Project Source](https://github.com/olton/farbe) | [NPM Package](https://www.npmjs.com/package/@olton/farbe) | [Documentation](https://v5.metroui.org.ua/libraries/farbe/)
+
 ## Introduction
 
 Farbe (German for "color") is a powerful and versatile JavaScript library designed for color manipulation and conversion. Whether you're building a design tool, creating data visualizations, or developing a theme system for your application, Farbe provides all the tools you need to work with colors effectively.

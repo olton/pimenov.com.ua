@@ -11,7 +11,9 @@ category: "Testing Frameworks"
 slug: latte-ua
 ---
 
-# Latte: Потужний фреймворк для тестування JavaScript додатків
+# Latte: потужний фреймворк для тестування JavaScript додатків
+
+[Project Source](https://github.com/olton/latte) | [NPM Package](https://www.npmjs.com/package/@olton/latte) | [Documentation](https://latte.org.ua/)
 
 ## Що таке Latte?
 

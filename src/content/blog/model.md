@@ -13,6 +13,9 @@ slug: model
 
 # Understanding Reactive Programming with Model
 
+[Project Source](https://github.com/olton/model) | [NPM Package](https://www.npmjs.com/package/@olton/model) | [Documentation](https://v5.metroui.org.ua/libraries/model/)
+
+
 ## Introduction
 
 Welcome to this comprehensive guide on `Model`, a powerful JavaScript library for reactive programming and two-way data binding. This article is designed for beginner programmers who want to understand the concepts of reactive programming and how to implement them in their web applications.

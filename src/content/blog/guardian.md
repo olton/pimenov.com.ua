@@ -13,6 +13,8 @@ slug: guardian
 
 # Guardian: A Comprehensive Data Validation Library for JavaScript
 
+[Project Source](https://github.com/olton/guardian) | [NPM Package](https://www.npmjs.com/package/@olton/guardian) | [Documentation](https://v5.metroui.org.ua/libraries/guardian/)
+
 ## Introduction
 
 Guardian is a powerful, lightweight JavaScript library designed for data validation. Whether you're validating user input in a form, checking API responses, or ensuring data integrity in your application, Guardian provides a simple yet flexible way to define validation rules and apply them to your data.

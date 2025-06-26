@@ -2,7 +2,6 @@
 import { datetime } from "@olton/datetime"
 import { str } from "@olton/string"
 const {posts} = Astro.props
-console.log(posts)
 ---
 <ul class="post-links">
     {posts.map(async p => {
